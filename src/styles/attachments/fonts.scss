@@ -1,0 +1,7 @@
+@include addFont(Roboto, Regular, roboto-regular, 400, normal);
+
+html {
+	font-family: 'Roboto', sans-serif, Arial, Helvetica;
+	color: var(--color-white);
+	font-size: 14px;
+}
