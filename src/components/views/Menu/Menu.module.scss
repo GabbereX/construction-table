@@ -1,0 +1,57 @@
+.menu {
+	min-height: calc(100vh - var(--header-height));
+	min-width: var(--menu-width);
+	max-width: var(--menu-width);
+	border-right: 1px solid var(--color-gray-700);
+}
+
+.header {
+	position: relative;
+	height: var(--header-height);
+	padding: 8px 7px 8px 20px;
+	color: var(--color-gray-100);
+	border-bottom: 1px solid var(--color-gray-700);
+	cursor: pointer;
+	transition: background var(--transition-duration-normal) ease;
+
+	&_abbr {
+		font-size: 10px;
+	}
+
+	&_arrow {
+		position: absolute;
+		right: 7px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		background: var(--color-gray-700);
+	}
+}
+
+// TODO!: Этот класс нужен?
+.list {
+	//padding: 0 22px;
+}
+
+.item {
+	padding: 0 22px;
+	cursor: pointer;
+	transition: background var(--transition-duration-normal) ease;
+
+	&:hover {
+		background: var(--color-gray-100);
+	}
+
+	& button {
+		display: flex;
+		align-items: center;
+		height: 32px;
+		line-height: 0;
+
+		& svg {
+			margin-right: 16px;
+		}
+	}
+}

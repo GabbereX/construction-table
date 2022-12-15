@@ -1,0 +1,39 @@
+.link {
+	position: relative;
+	color: var(--color-gray-100);
+	transition: color var(--transition-duration-normal) ease;
+
+	&:not(:last-child) {
+		margin-right: 28px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		left: 0;
+		bottom: -13px;
+		background: var(--color-white);
+
+		transition-property: width, background;
+		transition-duration: var(--transition-duration-normal);
+		transition-timing-function: ease;
+	}
+
+	&:hover, &.active {
+		color: var(--color-white);
+
+		&:after {
+			width: 100%;
+		}
+	}
+
+	&:active {
+		color: var(--color-gray-100);
+
+		&:after {
+			background: var(--color-gray-100);
+		}
+	}
+}
