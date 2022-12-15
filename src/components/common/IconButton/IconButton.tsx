@@ -1,8 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+import { Color } from '../../../consts/enums.consts'
+
 import { IIconButtonProps } from './IconButton.types'
-import { Color } from '../../../consts/consts'
 
 export function IconButton(props: IIconButtonProps) {
 	const {

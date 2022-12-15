@@ -1,6 +1,6 @@
 import { FormEvent, ReactNode, MouseEvent } from 'react'
 
-import { Color } from '../../../consts/consts'
+import { Color } from '../../../consts/enums.consts'
 
 type TEventButton = FormEvent<HTMLButtonElement> | MouseEvent<HTMLButtonElement> | MouseEvent<HTMLSpanElement>
 
