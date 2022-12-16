@@ -73,6 +73,39 @@ button {
 }
 input {
   overflow: visible;
+
+  &::-webkit-input-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  &::-moz-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  &:-moz-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  &:-ms-input-placeholder {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 }
 input,
 textarea {
@@ -111,7 +144,7 @@ textarea {
   height: auto;
 }
 ::-webkit-input-placeholder {
-  color: inherit;
+  color: var(--color-gray-600);
   opacity: 0.5;
 }
 ::-webkit-file-upload-button,

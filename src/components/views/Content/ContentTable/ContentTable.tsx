@@ -9,6 +9,7 @@ import { useAppDispatch } from '../../../../hooks/redux/useAppDispatch'
 import { Spinner } from '../../../common/Spinner'
 
 import styles from '../Content.module.scss'
+import { ContentTableRow } from './ContentTableRow'
 
 export function ContentTable() {
 	const { isLoading, data, error } = useAppSelector(theeRowsState)
@@ -29,8 +30,11 @@ export function ContentTable() {
 				</tr>
 			</thead>
 
-			<tbody>
-				HERE
+			<tbody className={ styles.table_body }>
+				{
+					!data.length &&
+						<ContentTableRow />
+				}
 			</tbody>
 		</table>
 
@@ -40,7 +44,7 @@ export function ContentTable() {
 					Ошибка! Не удалось загрузить список.
 				</span>
 			<button
-				onClick={() => getTheeRows()}
+				onClick={ getTheeRows }
 			>
 				Попробовать загрузить снова
 			</button>
