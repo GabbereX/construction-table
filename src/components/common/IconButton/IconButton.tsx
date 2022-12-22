@@ -56,6 +56,5 @@ const StyledButton = styled.button<IIconButtonProps>`
 
   &:disabled {
     cursor: default;
-    opacity: 0.5;
   }
 `

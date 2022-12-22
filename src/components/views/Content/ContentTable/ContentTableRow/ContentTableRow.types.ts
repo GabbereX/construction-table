@@ -1,5 +1,11 @@
 import { Nullable } from '../../../../../types/types'
-import { FieldName } from '../../../../../consts/enums.consts'
+import { FieldName, RowMode } from '../../../../../consts/enums.consts'
+import { ITreeRows } from '../../../../../store/treeRows/treeRows.types'
+
+export interface IContentTableRowProps {
+	data?: ITreeRows
+	rowMode?: RowMode
+}
 
 export interface IValuesRow {
 	[FieldName.ROW_NAME]: Nullable<string>,

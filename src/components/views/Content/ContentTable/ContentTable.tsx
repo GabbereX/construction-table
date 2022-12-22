@@ -10,6 +10,7 @@ import { Spinner } from '../../../common/Spinner'
 
 import styles from '../Content.module.scss'
 import { ContentTableRow } from './ContentTableRow'
+import { RowMode } from '../../../../consts/enums.consts'
 
 export function ContentTable() {
 	const { isLoading, data, error } = useAppSelector(theeRowsState)
@@ -31,10 +32,17 @@ export function ContentTable() {
 			</thead>
 
 			<tbody className={ styles.table_body }>
-				{
-					!data.length &&
-						<ContentTableRow />
-				}
+			{
+				data.length
+					? data.map(rowData =>
+							<ContentTableRow
+								key={ rowData.id }
+								data={ rowData }
+							/>
+						)
+					: <ContentTableRow rowMode={ RowMode.EDIT } />
+			}
+
 			</tbody>
 		</table>
 
